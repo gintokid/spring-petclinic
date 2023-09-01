@@ -4,14 +4,6 @@ pipeline {
     
     stages {
         
-        stage("checkout") {
-            steps {
-                sh "ls"
-                git branch:"main", url : 'https://github.com/gintokid/spring-petclinic'
-                sh "ls"
-            }
-        }
-        
         stage("build") {
             steps {
                 sh "./mvnw package"   
